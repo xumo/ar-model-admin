@@ -2,3 +2,16 @@
     color: brown;
     background-color: burlywood;
 }
+
+.object3d-properties{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-color: aqua;
+}
+
+a-scene {
+    height:100%;
+    width: 100%;
+}
+

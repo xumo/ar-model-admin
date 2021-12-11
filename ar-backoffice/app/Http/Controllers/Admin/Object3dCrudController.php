@@ -76,7 +76,7 @@ class Object3dCrudController extends CrudController
         $current = $this->crud->getCurrentEntry();
         $this->crud->set('show.setFromDb', false);
 
-        $this->crud->addColumn('name');
+        //$this->crud->addColumn('name');
         $this->crud->removeColumn('Actions');
         Widget::add([
             'type'     => 'object3d',
@@ -85,9 +85,8 @@ class Object3dCrudController extends CrudController
             'name' => $current->name,
             'download' => $current->download,
             'object_url'=> $current->object_url,
-        ])
-    ->to('before_content')
-    ;
+        ]);
+        $this->crud->removeColumn('extras');
     //CRUD::removeButton('action');
     //$this->crud->removeColumn('actions');
     }
