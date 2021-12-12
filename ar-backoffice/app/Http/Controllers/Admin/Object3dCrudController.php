@@ -35,6 +35,7 @@ class Object3dCrudController extends CrudController
    
     protected function setupListOperation()
     {
+	CRUD::addClause('where','user_id', '=',backpack_user()->id);
         CRUD::column('name')->type('text');
         CRUD::column('object_url')->label('3D Model');
         CRUD::column('download')->label('Downloads');
